@@ -13,6 +13,7 @@
     <img id="rotator" src="" alt="Loading Random Image...">
 
     <script>
+        // Array of your images
         const imageFiles = [
             "bluehour.jpg",
             "cat-vibin.png",
@@ -22,7 +23,7 @@
             "eclipse.jpg",
             "flying-comets-clouds.jpg",
             "girl-stars.png",
-            "Haunted-house.jpg", 
+            "Haunted-house.jpg",
             "horizon-2.jpg",
             "horizon.jpg",
             "idk-tbh.png",
@@ -47,16 +48,15 @@
             "vibrant-gate.png"
         ];
 
-        // Base URL pointing directly to your repository's src folder
-        const baseUrl = "https://githubusercontent.com";
+        // This uses local relative paths instead of raw.githubusercontent links
+        const baseFolder = "./src/";
 
         if (imageFiles.length > 0) {
-            // Pick a random image from the pool
             const randomIndex = Math.floor(Math.random() * imageFiles.length);
             const chosenImage = imageFiles[randomIndex];
 
-            // Set the image src to the raw file URL
-            document.getElementById('rotator').src = baseUrl + chosenImage;
+            // Renders via internal host directories directly 
+            document.getElementById('rotator').src = baseFolder + chosenImage;
         } else {
             console.error("The imageFiles array is empty.");
         }
