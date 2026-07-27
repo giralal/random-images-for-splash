@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    // List your GitHub Pages image paths
+    const backgrounds = [
+      './images/bg1.jpg',
+      './images/bg2.jpg',
+      './images/bg3.jpg'
+    ];
+
+    // Pick one at random
+    const random = backgrounds[Math.floor(Math.random() * backgrounds.length)];
+
+    // Instantly redirect to the chosen image file
+    window.location.replace(random);
+  </script>
+</head>
+<body></body>
+</html>
